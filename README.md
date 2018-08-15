@@ -21,7 +21,7 @@
     systemctl restart nfs-idmap
 
 
-  git clone https://github.com/M-Ayman/K8s-Sonar.git
+  git clone https://github.com/sunil217/K8s-Sonar.git
 
   cd K8s-Sonar
 
