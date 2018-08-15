@@ -1,6 +1,6 @@
 # Deploy SONARQUBE on Kubernetes with Persistent Storage
 
-  On NFS server
+  On NFS server (rancher-06) Node
 
     vim /etc/exports
       /sonarqube/mysql *(rw,sync,no_root_squash)
@@ -20,14 +20,15 @@
 
     systemctl restart nfs-idmap
 
+on Rancher-01 (Node)
 
-  git clone https://github.com/sunil217/K8s-Sonar.git
+  git clone https://github.com/sunil217/rancher-sonar-k8.git
 
-  cd K8s-Sonar
+  cd rancher-sonar-k8
 
   inside sonar-deployment.yaml and sonar-mysql-deployment.yaml
 
-    Replace server: "" with server: "the ip of NFS Server"
+    Replace server: "rancher06-ipaddress"
 
   kubectl create -f .
 
